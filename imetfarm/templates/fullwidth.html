@@ -1,0 +1,88 @@
+
+{% extends 'base.html' %}
+{% load cms_tags static %}
+
+{% block title %}
+{% page_attribute 'page_title' %}
+{% endblock title %}
+
+    {% block content %}
+    <div class="area-padding">
+        <div class="container fwt-padding">
+        {% placeholder "content" %}
+        </div>
+    </div>
+    {% endblock content %}
+
+{% block footer %}
+    <!-- ======= Footer ======= -->
+    {% placeholder "footer" or%}
+    <footer>
+        <div class="footer-area">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4">
+                <div class="footer-content">
+                <div class="footer-head">
+                    <div class="footer-logo">
+                    <h2>Imetfarm</h2>
+                    </div>
+
+                    <p>There is Imetfarm presence in social media and you can equally visit our page using any of the social media handles below.</p>
+                    <div class="footer-icons">
+                    <ul>
+                        <li>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- end single footer -->
+            <div class="col-md-4">
+                <div class="footer-content">
+                <div class="footer-head">
+                    <h4>information</h4>
+                    <p>
+                    Contact Imetfarm through any of the following or drop your message using  <a href="/#about">Contact page</a>.
+                    </p>
+                    <div class="footer-contacts">
+                    <p><span>Tel:</span> +123 456 789</p>
+                    <p><span>Email:</span>HenryAmosun@imetfarm.com</p>
+                    <p><span>Working Hours:</span> 9am-5pm</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- end single footer -->
+            <div class="col-md-4">
+                <div class="footer-content">
+                <div class="footer-head">
+                    <h4>Instagram</h4>
+                    <div class="flicker-img">
+                    <a href="#"><img src="{% static 'img/portfolio/1.jpg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/portfolio/2.jpg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/portfolio/3.jpg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/portfolio/4.jpg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/portfolio/5.jpg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/portfolio/6.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </footer><!-- End  Footer -->
+    {% endplaceholder %}
+{% endblock footer %}

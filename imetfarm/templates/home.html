@@ -1,0 +1,156 @@
+{% extends 'fullwidth.html' %}
+
+{% load cms_tags static %}
+
+{% block content %}
+{% placeholder "slide" or%}
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+    
+        <div class="carousel-inner" role="listbox">
+    
+          <div class="carousel-item active" style="background-image: url({% static 'img/hero-carousel/fishery-bg.jpg' %})">
+            <div class="carousel-container">
+                <div class="container d-inline-flex">
+                  <div class="slide-text">
+                    <h2 class="animate__animated animate__fadeInDown">ImetFarm Products and Investments</h2>
+                    <p class="animate__animated animate__fadeInUp">
+                      We're In The Business Of Helping You with fishes and livestocks from our farm
+                      and agric Business Investments without stress
+                    </p>
+                    <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                  </div>
+                  <div class="single-blog-img">
+                    <img src="{% static 'img/hero-carousel/fish collection.jpeg' %}" alt="fish collection">
+                  </div>
+                </div>
+
+            </div>
+          </div>
+    
+          <div class="carousel-item" style="background-image: url({% static 'img/hero-carousel/livestock-bg.jpg' %})">
+            <div class="carousel-container">
+                <div class="container d-inline-flex">
+                  <div class="slide-text">
+                    <h2 class="animate__animated animate__fadeInDown">The Best Farm Products</h2>
+                    <p class="animate__animated animate__fadeInUp">
+                      Helping out with best farm products of different kinds get to you without stress.
+                      All our Products is based internationally healthy standard.
+                    </p>
+                    <a href="/#products" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                  </div>
+                  <div class="single-blog-img">
+                    <img src="{% static 'img/hero-carousel/livestock.jpg' %}" alt="livestock">
+                  </div>
+                </div>
+            </div>
+          </div>
+    
+          <div class="carousel-item" style="background-image: url({% static 'img/hero-carousel/all.jpg' %})">
+            <div class="carousel-container">
+                <div class="container d-inline-flex">
+                  <div class="slide-text">
+                    <h2 class="animate__animated animate__fadeInDown">Reach out for our Farm Products</h2>
+                    <p class="animate__animated animate__fadeInUp">
+                      We are ever ready to work with you in having any of our farm <a href="/products">Products</a>
+                      and if interested in <a href="/products">Agric business</a> and <a href="/products">Investment</a> as well you can always contact us.
+                    </p>
+                    <a href="/contact-us" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                  </div>
+
+                  <div class="slide-img">
+                    <img src="{% static 'img/hero-carousel/snail.jpeg' %}" alt="snail">
+                  </div>
+                </div>
+            </div>
+          </div>
+    
+        </div>
+    
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+    
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+    
+      </div>
+    </div>
+    </section><!-- End Hero Section -->
+{% endplaceholder %}
+
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <div id="about" class="about-area area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>About Imetfarm</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- single-well start-->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="well-left">
+              <div class="single-well">
+                <a href="#">
+                  <img src="{% static 'img/about/1.jpg' %}" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- single-well end-->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="well-middle">
+              <div class="single-well">
+                <a href="#">
+                  <h4 class="sec-head">Farming and Investments</h4>
+                </a>
+                <p>
+                  Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis 
+                  iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, 
+                  consectetur adipisicing elit. Itaque quas officiis iure
+                </p>
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> Catfish Farming
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Snail Farming
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Livestock Farming
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> AgroInvestment
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> AgriBusiness
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- End col-->
+        </div>
+      </div>
+    </div><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <div id="products" class="services-area area-padding">
+      <div class="container">
+      {% placeholder "products" %}
+      </div>
+    </div>
+    <!-- End Services Section -->
+
+  </main><!-- End #main -->
+{% endblock content %}
