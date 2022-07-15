@@ -20,6 +20,7 @@ djangocms-bootstrap4 = "*"
 django-admin-sortable = "*"
 gunicorn = "*"
 django-heroku = "*"
+whitenoise = "*"
 
 [dev-packages]
 
