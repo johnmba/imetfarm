@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%(b@g36x%kfp+ks-7nzo==sjjfzp!m$uvmb^q)y2t!x+teu6%v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'imetfarm.com', 'https://imetfarm.herokuapp.com/']
 
@@ -194,9 +194,12 @@ USE_TZ = True
 #]
 
 # deployment static file setting
-STATIC_ROOT = path.join(BASE_DIR, 'static')
+STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = path.join(BASE_DIR, "media")
