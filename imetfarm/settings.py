@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-%(b@g36x%kfp+ks-7nzo==sjjfzp!m$uvmb^q)y2t!x+teu6%v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'imetfarm.com', 'https://imetfarm.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'imetfarm.com', '.herokuapp.com']
 
 SITE_ID = 1
 
