@@ -195,7 +195,7 @@ USE_TZ = True
 
 # deployment static file setting
 STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
