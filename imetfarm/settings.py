@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-%(b@g36x%kfp+ks-7nzo==sjjfzp!m$uvmb^q)y2t!x+teu6%v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-if not DEBUG:
+if DEBUG is False:
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
     CONN_MAX_AGE = 10
@@ -150,7 +150,7 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 DEVELOPMENT_MODE = getenv("DEVELOPMENT_MODE", "False") == "True"
 
-if DEBUG:
+if DEBUG is True:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -245,7 +245,7 @@ MEDIA_ROOT = path.join(BASE_DIR, "media")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # logg settings
-if not DEBUG:
+if DEBUG is False:
     LOGGING = {
         'version': 1,
         'disable_existing_loggers': False,
