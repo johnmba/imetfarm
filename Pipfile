@@ -21,6 +21,7 @@ django-admin-sortable = "*"
 gunicorn = "*"
 django-heroku = "*"
 whitenoise = "*"
+dj-database-url = "*"
 
 [dev-packages]
 

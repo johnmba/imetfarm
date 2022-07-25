@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from os import path
+import sys
+from os import path, getenv, environ
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,9 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%(b@g36x%kfp+ks-7nzo==sjjfzp!m$uvmb^q)y2t!x+teu6%v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'imetfarm.com', '.herokuapp.com']
+if not DEBUG:
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    CONN_MAX_AGE = 10
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'imetfarm.com', 'imetfarm.herokuapp.com']
 
 SITE_ID = 1
 
@@ -54,7 +60,8 @@ INSTALLED_APPS = [
     'djangocms_video',
     'djangocms_googlemap',
     'djangocms_snippet',
-#bootstrap
+    
+    #bootstrap
     'djangocms_icon',
     'djangocms_link',
     'djangocms_picture',
@@ -75,7 +82,8 @@ INSTALLED_APPS = [
     'djangocms_bootstrap4.contrib.bootstrap4_utilities',
     #'adminsortable',
 
-#pluging applications
+    #pluging applications
+    'cms_extensions',
     'contacts',
     'products',
 ]
@@ -138,12 +146,39 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# Database
+# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+DEVELOPMENT_MODE = getenv("DEVELOPMENT_MODE", "False") == "True"
+
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'ciba',
+        }
+    }
+
+
+
+#if len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+#    if getenv("DATABASE_URL", None) is None:
+#        raise Exception("DATABASE_URL environment variable not defined")
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#            'NAME': 'ciba',
+#        }
+#    }
+    #DATABASES = {
+    #    "default": dj_database_url.parse(environ.get("DATABASE_URL")),
+    #}
 
 
 # Password validation
@@ -209,7 +244,61 @@ MEDIA_ROOT = path.join(BASE_DIR, "media")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# logg settings
+if not DEBUG:
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'formatters': {
+            'verbose': {
+                'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+                'style': '{',
+            },
+            'simple': {
+                'format': '{levelname} {message}',
+                'style': '{',
+            },
+        },
+        'filters': {
+            'special': {
+                '()': 'project.logging.SpecialFilter',
+                'foo': 'bar',
+            },
+            'require_debug_true': {
+                '()': 'django.utils.log.RequireDebugTrue',
+            },
+        },
+        'handlers': {
+            'console': {
+                'level': 'INFO',
+                'filters': ['require_debug_true'],
+                'class': 'logging.StreamHandler',
+                'formatter': 'simple'
+            },
+            'mail_admins': {
+                'level': 'ERROR',
+                'class': 'django.utils.log.AdminEmailHandler',
+                'filters': ['special']
+            }
+        },
+        'loggers': {
+            'django': {
+                'handlers': ['console'],
+                'propagate': True,
+            },
+            'django.request': {
+                'handlers': ['mail_admins'],
+                'level': 'ERROR',
+                'propagate': False,
+            },
+            'myproject.custom': {
+                'handlers': ['console', 'mail_admins'],
+                'level': 'INFO',
+                'filters': ['special']
+            }
+        }
+    }
+
 
 import django_heroku
 django_heroku.settings(locals())
-#django_heroku.settings(locals())

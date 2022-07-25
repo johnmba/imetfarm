@@ -38,16 +38,14 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex justify-content-between">
       <div class="logo">
-        <a href="index.html"><img src="{% static 'img/imetfarm.jpg' %}" alt="logo" class="img-fluid"></a>
+        <a href="/"><img src="{% static 'img/imetfarm.jpg' %}" alt="logo" class="img-fluid"></a>
       </div>
       <nav id="navbar" class="navbar">
-        {% render_model_block request.current_page "changelist" %}
+        <!--{% render_model_block request.current_page "changelist" %}-->
         <ul>
-          {% show_menu 0 100 100 100  %}
-            <li><a class="nav-link scrollto" href="/#about">About</a></li>
-            <li><a class="nav-link scrollto" href="/#products">Products</a></li>
+          {% show_menu 0 100 100 100 'components/menu.html' %}
         </ul>
-        {% endrender_model_block %}
+        <!--{% endrender_model_block %}-->
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
     </div>
