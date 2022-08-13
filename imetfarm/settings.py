@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import sys
-from os import path, getenv, environ
+#import sys
+from os import path, getenv#, environ
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,17 +25,35 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-%(b@g36x%kfp+ks-7nzo==sjjfzp!m$uvmb^q)y2t!x+teu6%v'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-if DEBUG is False:
+ADMINS = [('John mba', 'johnelhudmba@gmail.com'), ('Johnny mba', 'nwanjamba@gmail.com'),]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'nwanjamba@gmail.com'
+EMAIL_HOST_PASSWORD = 'imfgamssieohbdhi' #past the key or password app here
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'default from email'
+
+if DEBUG:
+    EMAIL_HOST = 'localhost'
+    EMAIL_PORT = 1025
+    EMAIL_HOST_USER = ''
+    EMAIL_HOST_PASSWORD = ''
+    EMAIL_USE_TLS = False
+    DEFAULT_FROM_EMAIL = 'testing@example.com'
+
+
+if not DEBUG:
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
     CONN_MAX_AGE = 10
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'imetfarm.com', 'imetfarm.herokuapp.com']
 
-SITE_ID = 2
+SITE_ID = 1
 
 # Application definition
 
@@ -111,6 +129,7 @@ MIDDLEWARE = [
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
+    # Email backend middleware
     'django.middleware.locale.LocaleMiddleware',
 ]
 
@@ -146,11 +165,9 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 DEVELOPMENT_MODE = getenv("DEVELOPMENT_MODE", "False") == "True"
 
-if DEBUG is True:
+if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -222,19 +239,12 @@ USE_TZ = True
 #Static files (CSS, JavaScript, Images)
 #https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-#STATIC_URL = '/static/'
-#
-#STATICFILES_DIRS = [
-#    BASE_DIR / "static"
-#]
-
-# deployment static file setting
-STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static"
+    path.join(BASE_DIR, "static")
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = path.join(BASE_DIR, "media")
@@ -244,60 +254,77 @@ MEDIA_ROOT = path.join(BASE_DIR, "media")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# logg settings
-if DEBUG is False:
-    LOGGING = {
-        'version': 1,
-        'disable_existing_loggers': False,
-        'formatters': {
-            'verbose': {
-                'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-                'style': '{',
-            },
-            'simple': {
-                'format': '{levelname} {message}',
-                'style': '{',
-            },
-        },
-        'filters': {
-            'special': {
-                '()': 'project.logging.SpecialFilter',
-                'foo': 'bar',
-            },
-            'require_debug_true': {
-                '()': 'django.utils.log.RequireDebugTrue',
-            },
-        },
-        'handlers': {
-            'console': {
-                'level': 'INFO',
-                'filters': ['require_debug_true'],
-                'class': 'logging.StreamHandler',
-                'formatter': 'simple'
-            },
-            'mail_admins': {
-                'level': 'ERROR',
-                'class': 'django.utils.log.AdminEmailHandler',
-                'filters': ['special']
-            }
-        },
-        'loggers': {
-            'django': {
-                'handlers': ['console'],
-                'propagate': True,
-            },
-            'django.request': {
-                'handlers': ['mail_admins'],
-                'level': 'ERROR',
-                'propagate': False,
-            },
-            'myproject.custom': {
-                'handlers': ['console', 'mail_admins'],
-                'level': 'INFO',
-                'filters': ['special']
-            }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler'
         }
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
     }
+}
+
+#if not DEBUG:
+#    LOGGING = {
+#        'version': 1,
+#        'disable_existing_loggers': False,
+#        'formatters': {
+#            'verbose': {
+#                'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+#                'style': '{',
+#            },
+#            'simple': {
+#                'format': '{levelname} {message}',
+#                'style': '{',
+#            },
+#        },
+#        'filters': {
+#            'special': {
+#                '()': 'project.logging.SpecialFilter',
+#                'foo': 'bar',
+#            },
+#            'require_debug_true': {
+#                '()': 'django.utils.log.RequireDebugTrue',
+#            },
+#        },
+#        'handlers': {
+#            'mail_admins': {
+#                'level': 'ERROR',
+#                'class': 'django.utils.log.AdminEmailHandler',
+#                'filters': ['special']
+#            },
+#            'console': {
+#                'level': 'INFO',
+#                'filters': ['require_debug_true'],
+#                'class': 'logging.StreamHandler',
+#                'formatter': 'simple'
+#            }
+#        },
+#        'loggers': {
+#            'django.request': {
+#                'handlers': ['mail_admins'],
+#                'level': 'ERROR',
+#                'propagate': False,
+#            },
+#            'django': {
+#                'handlers': ['console'],
+#                'propagate': True,
+#            },
+#            'imetfarm.custom': {
+#                'handlers': ['console', 'mail_admins'],
+#                'level': 'INFO',
+#                'filters': ['special']
+#            }
+#        }
+#    }
 
 
 import django_heroku
