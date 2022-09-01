@@ -57,8 +57,16 @@
                         Contact Imetfarm through any of the following or drop your message using  <a href="/#about">Contact page</a>.
                     </p>
                     <div class="footer-contacts">
-                        <p><span>Tel:</span> +123 706 469 4476</p>
-                        <p><span>Email:</span>HenryAmosun@imetfarm.com</p>
+                        <p><span>Tel:</span>
+                            {% placeholder "phone" or%}
+                            +234 706 469 4476
+                            {% endplaceholder %}
+                        </p>
+                        <p><span>Email:</span>
+                            {% placeholder "email" or%}
+                            HenryAmosun@imetfarm.com
+                            {% endplaceholder %}
+                        </p>
                         <p><span>Working Hours:</span> 9am-5pm</p>
                     </div>
                 </div>

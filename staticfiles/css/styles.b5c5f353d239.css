@@ -138,7 +138,7 @@ div#preloader {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url("../img/preloader.gif") no-repeat center center;
+  background: #fff url("../img/preloader.d080c0b63057.gif") no-repeat center center;
 }
 
 ::-moz-selection {
@@ -198,7 +198,7 @@ div#preloader {
 }
 
 .header-bg {
-  background: url(../img/background/page-header.jpg);
+  background: url("../img/background/page-header.ba7ac13e294b.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -330,18 +330,14 @@ div#preloader {
   position: relative;
 }
 
-#hero .carousel-container, #hero .d-lg-inline-flex{
-  width: 100%;
-}
-
 .slide-text{
   width: 100%;
   height: 100%;
 }
 
 .slide-img{
-  width: 100%;
-  height: 70%;
+  width: 80%;
+  height: 300px;
 }
 
 .single-blog-img img{
@@ -398,17 +394,6 @@ div#preloader {
   #header {
     height: 64px;
     background: rgba(0, 0, 0, 0.8);
-  }
-  #header .logo h1 {
-    font-size: 28px;
-  }
-  #hero p {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-  #hero h2 {
-    font-size: 20px;
-    line-height: 1.2;
   }
 }
 @media (max-height: 500px) {
@@ -476,17 +461,8 @@ div#preloader {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.col-6{
-  height: 160px;
-}
-
 .about-area {
   background-color: #f9f9f9;
-}
-
-.product-items img{
-  width: 150px;
-  height: 200px;
 }
 
 .single-well > a {
@@ -527,7 +503,32 @@ div#preloader {
     width: 90%;
     padding: 20px;
   }
+  .d-sm{
+    display: none;
+  }
+  .d-smb{
+    display: block;
+  }
+  .b-col{
+    width: 95%;
+  }
+  #hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+  }
+  #about .H-150{
+    display: inherit;
+    height: 150px;
+    
+  }
 }
+
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1169px) {
   .product {
@@ -668,26 +669,7 @@ div#preloader {
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
-@media (min-width: 1920px) {
-  .work-right-text {
-    padding: 150px 150px;
-  }
-}
-/* Normal desktop :992px. */
-@media (min-width: 992px) and (max-width: 1169px) {
-  .slider-content {
-    padding: 146px 0;
-  }
 
-  .work-right-text {
-    padding: 40px 0;
-  }
-
-  .work-right-text h2 {
-    font-size: 18px;
-    line-height: 28px;
-  }
-}
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
 
@@ -723,6 +705,16 @@ div#preloader {
 }
 /* small mobile :320px. */
 @media (max-width: 767px) {
+  #hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 50px;
+    left: 5px;
+    right: 5px;
+  }
   .slider-area {
     margin-top: 60px;
   }

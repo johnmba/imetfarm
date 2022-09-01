@@ -138,7 +138,7 @@ div#preloader {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url("../img/preloader.gif") no-repeat center center;
+  background: #fff url("../img/preloader.d080c0b63057.gif") no-repeat center center;
 }
 
 ::-moz-selection {
@@ -198,7 +198,7 @@ div#preloader {
 }
 
 .header-bg {
-  background: url(../img/background/page-header.jpg);
+  background: url("../img/background/page-header.ba7ac13e294b.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -329,27 +329,19 @@ div#preloader {
   overflow: hidden;
   position: relative;
 }
-
-#hero .carousel-container, #hero .d-lg-inline-flex{
-  width: 100%;
-}
-
 .slide-text{
   width: 100%;
   height: 100%;
 }
-
 .slide-img{
-  width: 100%;
-  height: 70%;
+  width: 95%;
+  height: 300px;
 }
-
 .single-blog-img img{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
 }
-
 #hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
   position: absolute;
   top: 0;
@@ -376,7 +368,6 @@ div#preloader {
   left: 50px;
   right: 50px;
 }
-
 #hero h2 {
   color: #fff;
   margin-bottom: 20px;
@@ -389,26 +380,34 @@ div#preloader {
   line-height: 1.2;
   color: #fff;
 }
+
 @media (min-width: 1024px) {
   #hero p {
     width: 50%;
   }
 }
-@media (max-width: 768px) {
+
+@media (min-width: 650px) and (max-width: 765px) {
   #header {
     height: 64px;
     background: rgba(0, 0, 0, 0.8);
   }
-  #header .logo h1 {
-    font-size: 28px;
+  #hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 50px;
+    left: 5px;
+    right: 5px;
+  }
+  .slide-img{
+    width: 95%;
+    height: 250px;
   }
   #hero p {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-  #hero h2 {
-    font-size: 20px;
-    line-height: 1.2;
+    width: 95%;
   }
 }
 @media (max-height: 500px) {
@@ -476,35 +475,27 @@ div#preloader {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.col-6{
-  height: 160px;
-}
-
 .about-area {
   background-color: #f9f9f9;
 }
-
-.product-items img{
-  width: 150px;
+#about .H-150{
+  display: inherit;
   height: 200px;
+  
 }
-
 .single-well > a {
   display: block;
 }
-
 .single-well ul li {
   color: #444;
   display: block;
   padding: 5px 0;
 }
-
 .single-well ul li i {
   color: #3EC1D5;
   margin-right: 5px;
   font-size: 18px;
 }
-
 .single-well p {
   color: #444;
 }
@@ -516,18 +507,32 @@ div#preloader {
   width: 32%;
   padding: 20px;
 }
-
 .product-img img{
   width:  100%;
   height: 200px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .product {
     width: 90%;
     padding: 20px;
   }
+  .d-sm{
+    display: none;
+  }
+  .d-smb{
+    display: block;
+  }
+  .b-col{
+    width: 95%;
+  }
+  #about .H-150{
+    display: inherit;
+    height: 150px;
+    
+  }
 }
+
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1169px) {
   .product {
@@ -542,20 +547,16 @@ div#preloader {
   height: auto;
   width: 100%;
 }
-
 .contact-content {
   padding: 100px;
   background: #000 none repeat scroll 0 0;
 }
-
 .contact-content-right {
   padding: 100px;
 }
-
 .contact-icon {
   margin-bottom: 40px;
 }
-
 #google-map {
   height: 370px;
   margin-bottom: 20px;
@@ -668,26 +669,7 @@ div#preloader {
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
-@media (min-width: 1920px) {
-  .work-right-text {
-    padding: 150px 150px;
-  }
-}
-/* Normal desktop :992px. */
-@media (min-width: 992px) and (max-width: 1169px) {
-  .slider-content {
-    padding: 146px 0;
-  }
 
-  .work-right-text {
-    padding: 40px 0;
-  }
-
-  .work-right-text h2 {
-    font-size: 18px;
-    line-height: 28px;
-  }
-}
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
 
@@ -721,26 +703,7 @@ div#preloader {
     width: 67%;
   }
 }
-/* small mobile :320px. */
-@media (max-width: 767px) {
-  .slider-area {
-    margin-top: 60px;
-  }
 
-  .slider-content {
-    padding: 80px 0;
-  }
-
-  .slider-content h2 {
-    font-size: 18px !important;
-    line-height: 24px !important;
-  }
-
-  .slider-content h1 {
-    font-size: 20px !important;
-    line-height: 26px !important;
-  }
-}
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .submitbtn {
@@ -752,10 +715,5 @@ div#preloader {
     height: 40px;
     line-height: 37px;
     width: 40px;
-  }
-}
-@media (max-width: 575px) {
-  .slider-content {
-    padding: 0;
   }
 }
