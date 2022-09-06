@@ -387,11 +387,7 @@ div#preloader {
   }
 }
 
-@media (min-width: 650px) and (max-width: 765px) {
-  #header {
-    height: 64px;
-    background: rgba(0, 0, 0, 0.8);
-  }
+@media (max-width: 650px) {
   #hero .carousel-container {
     display: flex;
     justify-content: center;
@@ -399,15 +395,25 @@ div#preloader {
     position: absolute;
     bottom: 0;
     top: 50px;
-    left: 5px;
-    right: 5px;
+    left: 15px;
+    right: 15px;
+  }
+  #hero p {
+    width: 95%;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 765px) {
+  #header {
+    height: 64px;
+    background: rgba(0, 0, 0, 0.8);
   }
   .slide-img{
     width: 95%;
     height: 250px;
   }
   #hero p {
-    width: 95%;
+    width: 90%;
   }
 }
 @media (max-height: 500px) {
