@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-%(b@g36x%kfp+ks-7nzo==sjjfzp!m$uvmb^q)y2t!x+teu6%v'
 
-DEBUG = False
+DEBUG = True
 
 ADMINS = [('John mba', 'johnelhudmba@gmail.com'), ('Johnny mba', 'nwanjamba@gmail.com'),]
 

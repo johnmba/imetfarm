@@ -173,13 +173,12 @@ div#preloader {
 --------------------------------------------------------------*/
 #header {
   height: 80px;
-  transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: rgba(13, 51, 24, 0.5);
+  background: rgba(13, 51, 24, 1.0);
 }
 #header.header-scrolled {
-  background: rgba(13, 51, 24, 0.8);
+  background: rgba(13, 51, 24, 1.0);
   height: 64px;
 }
 
