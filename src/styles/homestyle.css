@@ -1,0 +1,193 @@
+
+/*--------------------------------------------------------------
+# FrontPage Section
+--------------------------------------------------------------*/
+#frontpage {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#frontpage .carousel-inner{
+  height: inherit;
+}
+#frontpage .carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
+}
+#frontpage .carousel__viewport__slide{
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+}
+#frontpage .carousel-item {
+  display: block;
+  width: 100%;
+  margin-right: 0;
+}
+#frontpage li a{
+  display: inherit;
+}
+#intro{
+  background-image: url('/build/images/hero-carousel/farmfield.jpg')
+}
+#aboutPnS{
+  background-image: url('/build/images/hero-carousel/cowfarm.jpg')
+}
+#contact{
+  background-image: url('/build/images/hero-carousel/fishes.jpg')
+}
+#frontpage .carousel-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#frontpage .carousel, #frontpage .carousel-inner, #frontpage .carousel-item::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#frontpage .carousel-caption{
+  bottom: 40%;
+}
+#frontpage .carousel-item::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#frontpage .carousel-fade .carousel-inner .carousel-item {
+  transition-property: opacity;
+}
+#frontpage .carousel-fade .carousel-inner .carousel-item,
+#frontpage .carousel-fade .carousel-inner .active.carousel-item-start,
+#frontpage .carousel-fade .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+#frontpage .carousel-fade .carousel-inner .active,
+#frontpage .carousel-fade .carousel-inner .carousel-item-next.carousel-item-start,
+#frontpage .carousel-fade .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+#frontpage .carousel-fade .carousel-inner .carousel-item-next,
+#frontpage .carousel-fade .carousel-inner .carousel-item-prev,
+#frontpage .carousel-fade .carousel-inner .active.carousel-item-start,
+#frontpage .carousel-fade .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.single-blog-img img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+#frontpage p {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  #frontpage .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 50px;
+    left: 15px;
+    right: 15px;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 765px) {
+  #header {
+    height: 64px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+@media (max-height: 500px) {
+  #frontpage {
+    height: 150vh;
+  }
+}
+
+  /*--------------------------------------------------------------
+# ABOUT
+--------------------------------------------------------------*/
+#about .d-smb, #about .col{
+  max-height: 320px;
+}
+#about .row{
+  max-width: 850px;
+}
+.flx{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 0;
+}
+.flx > div{
+  flex: 0 0 50%;
+}
+.flx, .nopad{
+  max-width: 200px;
+}
+.nopad{
+  padding: 0;
+}
+
+  /*--------------------------------------------------------------
+# PRODUCTS
+--------------------------------------------------------------*/
+.card{
+  min-width: 200px;
+  max-width: 250px;
+  padding: 5px;
+}
+.card img{
+  padding: 10px;
+}
+
+@media (max-width: 650px) {
+  .product {
+    width: 90%;
+    padding: 20px;
+  }
+  .d-sm{
+    display: none;
+  }
+  .d-smb{
+    display: block;
+  }
+  .b-col{
+    width: 95%;
+  }
+  #about .H-150{
+    display: inherit;
+    height: 150px;
+    
+  }
+  #about .flx{
+    display: none;
+  }
+  #about .flx{
+    display: none;
+  }
+  .nopad{
+    max-width: 100%;
+    height: 320px;
+  }
+}

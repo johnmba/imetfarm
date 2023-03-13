@@ -1,11 +1,14 @@
 {
-	"folders": [
-		{
-			"path": "../../uncle coco/bluespring"
-		},
-		{
-			"path": ".."
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": ".."
+        },
+        {
+            "path": "../../uncle coco/bluespring"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "imetfarm-1",
+        "liveServer.settings.port": 5501
+    }
 }

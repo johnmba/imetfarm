@@ -1,0 +1,108 @@
+
+{
+    "tutorials": [
+        {   "id": 0,
+            "date": "1-2-2022",
+            "topic": "World wide web(www) transition and future of web development along social media.",
+            "body": {
+                "summary": "here have been significant changes in web development starting from the primitive stage of web 1.0 which is the starting point of web development which was just static HTML used in communication between government parasatals and organisations pioneered by Berners-Lee in the 1990s who wrote three major things of the web which are HTML, URL and http.",
+                "Evolution of Web 2.0": "The emergence of web 2.0 in the early 2000s changed the way Internet is used by introducing interactivity, social connectivity and user generated content as seen in social media network like Twitter, LinkedIn Facebook etc... However, the demand for web 2.0 and advancing it's features triggered incorporation of innovative written programs and other programming languages into the web like cascading style sheet (CSS) which transformed the HTML in web 1.0 giving developers the freedom of Positioning HTML elements and beautifying it hence growing into what is known today as user interface (UI), python, Java used in writing Application programming interface (APIs) which acts as gateway between the web UI and it's data source from database, JavaScript which made it seamlessly easy to output data to the UI in real time without changing state with the help of JSON which has become defacto vessel for data transfer between systems even though there are other means like XML, CSV, and yaml which are defacing since the emergence of JSON even though there are areas they are best fit like yaml in deployment, CSV in exporting or uploading data into database and XML in building applications in java. However at this point every tool that defines web 2.0 has emerged and taken shape in the evolving web.",
+                "The emergence of fast evolving web 3.0":[
+                    "The evolving web is currently in mix of web 2.0 and 3.0 with everything moving pretty fast just as every other stage it's giving birth to new skills in web development such as:",
+                    ["data science", "machine learning", "artificial intelligence", "cryptography", "cyber security", "data analytics"],
+                    "The demanding skills all have to work together and adapt data that suits an end user with protecting their privacy from the streams of data they put out but to better understand this; just think about chimamanda (the novelist) statement in an honorary doctorate degree event and she said 'we hope someday social will not be used for cyber bullying but in connecting ideas' At this point I believe web 2.0 connected people but web 3.0 will manage the connected people and their activities; hence the direction of evolving web 3.0 is towards a self driven community that's the community determines the operation of the web."
+                ],
+                "The future and Harnessing the potentials of web development.": "The glimpse of the future of web has been realized during COVID-19 and after, the web is transforming along the COVID-19 era harnessed features of the web. However, many people and cooperations have long tapped into the powers of the web like in Bill Gates' book titled business at the speed of thought talked about how the company transformed their error in windows XP to achieving their all time best sold window window 7 which was possible by collecting all reports on the product through FAQ and issues lodging creating a dynamic and coherent working environment for all parties. The COVID-19 era did not permit physical interaction of people yet Amazon made it's all time best sales and Jeff bezos became world richest man. however, today everybody is using web in sales, review of products, survey, communication and socializing amongst other things"
+            },
+            "author": "john mba"
+        },
+        {   "id": 1,
+            "date": "1-2-2022",
+            "topic": "frustrating Errors and Solutions in Django Deployment.",
+            "body": "so many studies have shown that tea has health benefits associated with obesity, cancer and cardiovascular diseases and neurological diseases which are world leading trends of diseases. Research have shown that phytochemicals present in tea is the bedrock of tea's health benefits which have been suggested to function through multifunctional target, antioxidant property, metal chelating as well as inhibition activity. In this present study, the level of the presence of these phytochemicals(alkaloids, tannings, flavonoids, glycosides, cyanogenic glycosides and lignin) are compared in six different commercial teabags(Loyd, Top tea, Lipton, Dilma, Freshpark and Five Roses) using preliminary phytochemical screening method and statistical analysis using one-way ANOVA at alpha(P<0.05) level of significance and pearson correlation(R)(*. Correlation is significant at the 0.05 level(2-tailed). And **. Correlation is significant at the 0.01 level(2-tailed)). However, in conclusion all the different teabags label are positively inter-related though the strength of their relationship differs with one another. However, there is difference in the level of the presence of phytochemicals present among the teabags with Loyd having the highest level of tannings and cyanogenic glycosides, Loyd, Freshpark, and Five Roses has the highest level of alkaloids, Top tea has the highest level of flavonoids, Freshpark has the highest level of glycosides, and Lipton having the highest level of lignin, Loyd subsequently having  the highest level of total phytochemicals",
+            "author": "john mba"
+        },
+        {
+            "id": 2,
+            "date": "1-2-2022",
+            "topic": "The little and silent but frustrating errors in FrontEnd development.",
+            "body": "Mutations causes alteration in genes which is the cause of in-born diseases in children and adults and some severe diseases occurring today are associated with genes. Many diseases are generally determined example. Huntinton’s diseases and cystic fibrosis (CF) others are influenced by genes (Sade., 1998). However, according to World Health Organisation all monogenic diseases at birth is approximately 10/1000 (1996) and according to townsend cardio vascular diseases kills over 16,000 individuals every year (2014). However, the recent scientific developments make it possible for medicine to target such genetically related diseases at the molecular level (Sade., 1998). Gene Therapy could be by harnessing the therapeutic potentials of gene silencing RNA interference (Yang et al., 2014); the addition of gene; by killing of the disease cells using cytoreductive gene or by the suppression of the body’s immune response (Khushboo et al., 2014). However, these could be achieved either by manipulation at gamete cells known as germ line gene therapy which can be inherited by offspring or by somatic gene therapy which its modification is restricted to individual patient and cannot be inherited (Khushboo et al., 2014). However, gene therapy can be done in vivo or Ex Vivo by the use of delivery molecule called vectors. The vectors could either be viral or non viral vectors. Viral vectors are very efficient in gene delivery and their expression as well (Marie et al., 2008). The immune system in the administration route is an important factor in the safe delivery and expression of genes. However, viral vectors are less immunogenic than non-viral vectors (Te-lang et al., 2008) despite being limited in number of genes transported or delivered. Hence researchers are focusing on the use of non-viral vectors which are artificially synthesised like polyplexes and lipoplexes (Marie et al., 2008). Moreover the best candidates for gene therapy are monogenic diseases followed by important clinical results that have been obtained in multiple monogenic diseases such as severe combined immunodefieincies and haemophira B (Pol., 2013). However, Researcher must overcome many technical challenges before gene therapy will be a practical approach to treating diseases and as well the ethical issues which raises the questions, how can “good” and “bad” uses of gene therapy be distinguished? (Bethesda; 2014). Meanwhile, there are many other issues with gene therapy such as clinical safety and efficacy, Regulations and commercialization.",
+            "author": "john mba"
+        },
+        {
+            "id": 3,
+            "date": "1-2-2022",
+            "topic": "Easy rout in starting continuous global Business or carrier Development.",
+            "body": "so many studies have shown that tea has health benefits associated with obesity, cancer and cardiovascular diseases and neurological diseases which are world leading trends of diseases. Many diseases are generally determined example. Huntinton’s diseases and cystic fibrosis (CF) others are influenced by genes (Sade., 1998). However, according to World Health Organisation all monogenic diseases at birth is approximately 10/1000 (1996) and according to townsend cardio vascular diseases kills over 16,000 individuals every year (2014). However, the recent scientific developments make it possible for medicine to target such genetically related diseases at the molecular level (Sade., 1998). Gene Therapy could be by harnessing the therapeutic potentials of gene silencing RNA interference (Yang et al., 2014); the addition of gene; by killing of the disease cells using cytoreductive gene or by the suppression of the body’s immune response (Khushboo et al., 2014). However, these could be achieved either by manipulation at gamete cells known as germ line gene therapy which can be inherited by offspring or by somatic gene therapy which its modification is restricted to individual patient and cannot be inherited (Khushboo et al., 2014). However, gene therapy can be done in vivo or Ex Vivo by the use of delivery molecule called vectors. The vectors could either be viral or non viral vectors. Viral vectors are very efficient in gene delivery and their expression as well (Marie et al., 2008). The immune system in the administration route is an important factor in the safe delivery and expression of genes. However, viral vectors are less immunogenic than non-viral vectors (Te-lang et al., 2008) despite being limited in number of genes transported or delivered. Hence researchers are focusing on the use of non-viral vectors which are artificially synthesised like polyplexes and lipoplexes (Marie et al., 2008). Moreover the best candidates for gene therapy are monogenic diseases followed by important clinical results that have been obtained in multiple monogenic diseases such as severe combined immunodefieincies and haemophira B (Pol., 2013). However, Researcher must overcome many technical challenges before gene therapy will be a practical approach to treating diseases and as well the ethical issues which raises the questions, how can “good” and “bad” uses of gene therapy be distinguished? (Bethesda; 2014). Meanwhile, there are many other issues with gene therapy such as clinical safety and efficacy, Regulations and commercialization.",
+            "author": "john mba"
+        }
+    ],
+    "views": [
+        {
+            "id": 0,
+            "date": "1-2-2022",
+            "quote": "While in wait add values because the values will make you indispensible and prepared before you establish strongly before your enemies.",
+            "phils": "john mba"
+        },
+        {
+            "id": 1,
+            "date": "1-2-2022",
+            "quote": "There is a reason people come around and there is a reason they support and stand by you and that reason is because the believe in you; you don't have to fail but keep going even when the going gets though.",
+            "phils": "john mba"
+        },
+        {
+            "id": 2,
+            "date": "1-2-2022",
+            "quote": "The older I become the more I realize all we do here on earth is for self preservation and the greatest reason for this self preservation is family, those who have invested in you and have been there",
+            "phils": "john mba"
+        },
+        {
+            "id": 3,
+            "date": "1-2-2022",
+            "quote": "it breaks the heart when those who shares common enemy don't want to share common interests.",
+            "phils": "john mba"
+        },
+        {
+            "id": 4,
+            "date": "1-2-2022",
+            "quote": "if choose to abandon the truth just because it hurts then genuine people can't be around even in crowded ",
+            "phils": "john mba"
+        },
+        {
+            "id": 5,
+            "date": "1-2-2022",
+            "quote": "when you do anything and everyone is happy you are either a fool entertaining people or you are the midst of fools.",
+            "phils": "john mba"
+        },
+        {
+            "id": 6,
+            "date": "1-2-2022",
+            "quote": "when you loose, things start leaving, don't leave your mind loose keep it in check it's the only route back to better.",
+            "phils": "john mba"
+        },
+        {
+            "id": 7,
+            "date": "1-2-2022",
+            "quote": "you have done everything man and woman does to protect and raise a child alone, daddy taught me how to fight for myself and stand my ground while you taught me to be trust in to God; love and respect everybody.",
+            "phils": "john mba"
+        },
+        {
+            "id": 8,
+            "date": "1-2-2022",
+            "quote": "you can't work from because there will be many distractions; the distractions where there when learnt the skills from home 🏠 this is my passion that's why there noise wasn't noticed.",
+            "phils": "john mba"
+        },
+        {
+            "id": 9,
+            "date": "1-2-2022",
+            "quote": "It's irritating when lions begin to settle for grass just because of hunger.",
+            "phils": "john mba"
+        },
+        {
+            "id": 10,
+            "date": "1-2-2022",
+            "quote": "Life is just like google map, it reroutes when road is missed but the destination remain the same.",
+            "phils": "john mba"
+        }
+    ]
+}

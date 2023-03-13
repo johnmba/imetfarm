@@ -1,0 +1,155 @@
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1169px) {
+  .product {
+    width: 40%;
+    padding: 20px;
+  }
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 550px) and (max-width: 860px) {
+
+  .widget-product .product-info {
+    display: block;
+    float: none;
+    padding-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .map-column {
+    margin-left: 0;
+    padding-right: 40px;
+  }
+
+  .post-information .entry-meta {
+    font-size: 13px;
+    padding: 5px 0;
+  }
+
+  .post-information .entry-meta span a {
+    padding: 4px 0;
+  }
+
+  .contact-form {
+    margin-top: 0px;
+  }
+
+  .search-option input {
+    width: 67%;
+  }
+}
+
+/* Large Mobile :480px. */
+@media(max-width: 550px){
+  #header nav{
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    right: 0px;
+  }
+  #header .mobile-nav-toggle{
+    position: fixed;
+    display: inline-block;
+    top: 15px;
+    right: 10px;
+  }
+  
+  #header ul{
+    display: none;
+  }
+
+  #header nav:hover ul{
+    top: 54px;
+    height: 95vh;
+    width: 50vw;
+    display: block;
+    background: rgba(1, 2, 2, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+    padding: 10px;
+  }
+  .navbar-mobile a, .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #f1f1f1;
+  }
+  .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+    color: #0c28c7;
+  }
+  .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+    margin: 15px;
+  }
+  #frontpage .carousel-caption {
+    bottom: 10%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #products .card-group{
+    display: block;
+  }
+  #products .card-img-top{
+    height: 250px;
+  }
+  #products .card{
+    max-width: unset;
+    min-width: unset;
+  }
+
+  .icons-bottom ul li a {
+    height: 40px;
+    line-height: 37px;
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #abt{
+    display: none;
+  }
+  #about .col{
+    max-height: unset;
+  }
+  .icons-bottom ul li a {
+    height: 40px;
+    line-height: 37px;
+    width: 40px;
+  }
+}
+
+@media print, screen and (max-height: 320px){
+  #pgBackground{
+    height: 280vh;
+  }
+}
+
+@media print{
+  body{
+      padding:0.4in;
+      font-size:12pt;
+      color:#444
+  }
+}
+@media print, screen and (max-height: 680px){
+  footer{
+      text-align: left;
+      margin: 20px auto;
+      position: relative;
+      left: auto;
+      bottom: auto;
+      width: auto
+  }
+}
+@media print, screen and (max-height: 480px){
+  
+  footer{
+      text-align: center;
+      margin: 20px auto;
+      position: relative;
+      left: auto;
+      bottom: auto;
+      width: auto
+  }
+}
