@@ -191,3 +191,33 @@
     height: 320px;
   }
 }
+
+
+/*--------------------------------------------------------------
+# Share button
+--------------------------------------------------------------*/
+#share{
+  display: inline-flex;
+  position: sticky;
+  bottom: 50px;
+  left: 94%;
+  overflow: hidden;
+  flex-direction: column;
+  overflow: hidden;
+}
+#share button{
+  height: 40px;
+  width: 40px;
+  margin-bottom: 14px;
+}
+#share > ul{
+  display: inline-block;
+  overflow: hidden;
+  height: 0;
+}
+#share:hover ul{
+  height: 200px;
+}
+#share ul a:hover{
+  background-color: rgba(15, 161, 137, 0.7);
+}

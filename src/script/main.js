@@ -31,9 +31,9 @@ for (let index = 0; index < carouselBtns.length; index++) {
   })
 }
 // timed carousing
-setInterval(() => {
-  carouseTo()
-}, 50000)
+//setInterval(() => {
+//  carouseTo()
+//}, 50000)
 
 (function() {
   "use strict";

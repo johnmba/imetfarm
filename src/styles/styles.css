@@ -3,7 +3,13 @@
 # General
 --------------------------------------------------------------*/
 
+.background-item{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 body {
+  position: relative;
   background: #fff none repeat scroll 0 0;
   color: #444;
   font-family: "Open Sans", sans-serif;
@@ -29,7 +35,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #3EC1D5;
+  color: #2ecc71;;
   text-decoration: none;
 }
 a:active, a:hover {
@@ -48,27 +54,46 @@ input, select, textarea, input[type=text], input[type=date], input[type=url], in
   appearance: none;
   box-shadow: none !important;
 }
+.rel_positn{
+  position: relative;
+}
+.centerflx{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-group{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.card-title{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.flxwrap{
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+#header{
   height: 80px;
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
   z-index: 997;
-  transition: all 0.5s;
+  transition: all 0.5s #2ecc71;;
   background: rgba(13, 51, 24, 1.0);
   position: fixed;
 }
-#header.header-scrolled {
+#header .header-scrolled {
   background: rgba(13, 51, 24, 1.0);
   height: 64px;
-}
-#header nav{
-  display: flex;
 }
 #header .logo h1 a, #header .logo h1 a:hover {
   color: #fff;
@@ -148,22 +173,19 @@ input, select, textarea, input[type=text], input[type=date], input[type=url], in
   margin-left: 5px;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #3ec1d5;
+  color: #2ecc71;;
 }
 ::-moz-selection {
-  background: #3EC1D5;
+  background: #2ecc71;;
   text-shadow: none;
 }
-
 ::selection {
-  background: #3EC1D5;
+  background: #2ecc71;;
   text-shadow: none;
 }
-
 .area-padding {
   padding: 50px 0px 10px;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -176,7 +198,7 @@ input, select, textarea, input[type=text], input[type=date], input[type=url], in
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #3ec1d5;
+  background: #2ecc71;;
   width: 40px;
   height: 40px;
   transition: all 0.4s;
@@ -187,7 +209,7 @@ input, select, textarea, input[type=text], input[type=date], input[type=url], in
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #60ccdc;
+  background: #2ecc71;;
   color: #fff;
 }
 .back-to-top.active {
@@ -217,63 +239,6 @@ input, select, textarea, input[type=text], input[type=date], input[type=url], in
   display: none;
   line-height: 0;
   transition: 0.5s;
-}
-
-@media (max-width: 991px) {
-  .mobile-nav-toggle {
-    display: block;
-  }
-
-  .navbar ul {
-    display: none;
-  }
-}
-.navbar-mobile {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(1, 2, 2, 0.9);
-  transition: 0.3s;
-  z-index: 999;
-}
-.navbar-mobile .mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #fff;
-  overflow-y: auto;
-  transition: 0.3s;
-}
-.navbar-mobile a, .navbar-mobile a:focus {
-  padding: 10px 20px;
-  font-size: 15px;
-  color: #0d2529;
-}
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #3ec1d5;
-}
-.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
-  margin: 15px;
-}
-
-/* Normal desktop :992px. */
-@media (min-width: 992px) and (max-width: 1169px) {
-  .product {
-    width: 40%;
-    padding: 20px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -316,8 +281,19 @@ input, select, textarea, input[type=text], input[type=date], input[type=url], in
 .footer-icons ul li {
   display: inline-block;
 }
-
-.footer-icons ul li a {
+.title-icon{
+  display: inline-block;
+  border: 1px solid #444;
+  color: #444;
+  font-size: 16px;
+  height: 40px;
+  line-height: 38px;
+  margin-right: 5px;
+  text-align: center;
+  width: 40px;
+  border-radius: 50%;
+}
+#share > button, #share > ul li a, .footer-icons ul li a{
   border: 1px solid #444;
   color: #444;
   font-size: 16px;
@@ -347,69 +323,20 @@ input, select, textarea, input[type=text], input[type=date], input[type=url], in
 }
 
 .footer-contacts p span {
-  color: #3EC1D5;
+  color: #2ecc71;;
   font-weight: 700;
 }
 
 .footer-content {
   display: block;
   overflow: hidden;
+  padding: 5px;
 }
-
+.footer-head h4{
+  margin-top: 50px;
+  font-weight: bold;
+}
 .footer-area-bottom {
   background: #f1f1f1 none repeat scroll 0 0;
-  padding: 15px 0;
-}
-
-
-/*--------------------------------------------------------------
-# Responsive
---------------------------------------------------------------*/
-
-/* Tablet desktop :768px. */
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .widget-product .product-info {
-    display: block;
-    float: none;
-    padding-left: 0;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .map-column {
-    margin-left: 0;
-    padding-right: 40px;
-  }
-
-  .post-information .entry-meta {
-    font-size: 13px;
-    padding: 5px 0;
-  }
-
-  .post-information .entry-meta span a {
-    padding: 4px 0;
-  }
-
-  .contact-form {
-    margin-top: 0px;
-  }
-
-  .search-option input {
-    width: 67%;
-  }
-}
-
-/* Large Mobile :480px. */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .submitbtn {
-    float: none;
-    width: 99.8%;
-  }
-
-  .icons-bottom ul li a {
-    height: 40px;
-    line-height: 37px;
-    width: 40px;
-  }
+  padding: 10px 0;
 }

@@ -60,6 +60,7 @@
         Template Main CSS File-->
         <link href="/src/styles/styles.css" rel="stylesheet">
         <link href="/src/styles/homestyle.css" rel="stylesheet">
+        <link href="/src/styles/mediaCss.css" rel="stylesheet">
         <link href="/src/styles/animation.css" rel="stylesheet">
     </head>
 
@@ -70,9 +71,9 @@
                 <div class="logo">
                     <a href="/"><img src="/build/icons/imetfarm-log.png" alt="logo" class="img-fluid"></a>
                 </div>
-                <nav>
+                <nav class="nav-container">
                     <i class="bi bi-list mobile-nav-toggle"></i>
-                    <ul id="navbar" class="navbar navbar navbar-light">
+                    <ul id="navbar" class="navbar navbar-light navbar navbar-mobile">
                         <li><a class="nav-link scrollto active-link" href="/">Home</a></li>
                         <li><a class="nav-link scrollto" href="/#about">About</a></li>
                         <li><a class="nav-link scrollto" href="/#products">Products</a></li>
@@ -89,13 +90,13 @@
                 <div class="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#intro" data-slide-to="0" class="active" >
-                            <a class="active" href="#intro">contact</a>
+                            <a data-target="#intro" href="#intro" class="carousel__btn">contact</a>
                         </li>
                         <li data-target="#aboutPnS" data-slide-to="1" href="#aboutPnS">
-                            <a href="#aboutPnS">contact</a>
+                            <a href="#aboutPnS" class="carousel__btn">contact</a>
                         </li>
                         <li data-target="#contact" data-slide-to="2" href="#contact">
-                            <a href="#contact">contact</a>
+                            <a href="#contact" class="carousel__btn">contact</a>
                         </li>
                     </ol>
                     <div class="carousel-inner" role="listbox">
@@ -112,10 +113,10 @@
                                         <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
                                     </div>
                                 </div>
-                                <a class="carousel__prev" href="#contact" role="button">
+                                <a class="carousel__prev carousel__btn" href="#contact" role="button">
                                     Previous
                                 </a>
-                                <a class="carousel__next" href="#aboutPnS" role="button">
+                                <a class="carousel__next carousel__btn" href="#aboutPnS" role="button">
                                     next
                                 </a>
                             </div>
@@ -131,10 +132,10 @@
                                         <a href="/#products" class="btn-get-started scrollto animate__animated animate__fadeInUp">Learn More</a>
                                     </div>
                                 </div>
-                                <a class="carousel__prev" href="#intro" role="button">
+                                <a class="carousel__prev carousel__btn" href="#intro" role="button">
                                     Previous
                                 </a>
-                                <a class="carousel__next" href="#contact" role="button">
+                                <a class="carousel__next carousel__btn" href="#contact" role="button">
                                     Next
                                 </a>
                             </div>
@@ -150,10 +151,10 @@
                                     <a href="/contact-us" class="btn-get-started scrollto animate__animated animate__fadeInUp">Contact Us</a>
                                     </div>
                                 </div>
-                                <a class="carousel__prev" href="#aboutPnS" role="button">
+                                <a class="carousel__prev carousel__btn" href="#aboutPnS" role="button">
                                     Previous
                                 </a>
-                                <a class="carousel__next" href="#intro" role="button">
+                                <a class="carousel__next carousel__btn" href="#intro" role="button">
                                     Next
                                 </a>
                             </div>
@@ -176,7 +177,7 @@
                     </div>
                     <div class="row">
                         <!-- single-well start-->
-                        <div class="col">
+                        <div id="abt" class="col">
                             <div class="row d-smb">
                                 <div class="col b-col flx">
                                     <div class="">

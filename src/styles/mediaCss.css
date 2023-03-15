@@ -42,7 +42,7 @@
 }
 
 /* Large Mobile :480px. */
-@media(max-width: 550px){
+@media(max-width: 545px){
   #header nav{
     position: absolute;
     display: inline-block;
@@ -52,8 +52,8 @@
   #header .mobile-nav-toggle{
     position: fixed;
     display: inline-block;
-    top: 15px;
-    right: 10px;
+    top: 30px;
+    right: 20px;
   }
   
   #header ul{
@@ -61,7 +61,7 @@
   }
 
   #header nav:hover ul{
-    top: 54px;
+    top: 70px;
     height: 95vh;
     width: 50vw;
     display: block;
@@ -80,9 +80,6 @@
   }
   .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
     margin: 15px;
-  }
-  #frontpage .carousel-caption {
-    bottom: 10%;
   }
 }
 
@@ -105,7 +102,17 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 430px) {
+  .logo {
+    margin-left: 2rem;
+  }
+  #frontpage .card{
+    max-width: unset;
+    min-width: unset;
+    width: 100%;
+    padding: 10px;
+    margin: 0 20px;
+  }
   #abt{
     display: none;
   }
