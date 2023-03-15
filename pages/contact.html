@@ -25,6 +25,7 @@
     <!-- Template Main CSS File-->
     <link href="../src/styles/styles.css" rel="stylesheet">
     <link href="../src/styles/contact.css" rel="stylesheet">
+    <link href="../src/styles/mediaCss.css" rel="stylesheet">
   </head>
 
   <body>
@@ -36,20 +37,23 @@
     <![endif]-->
 
       <!-- ======= Header ======= -->
-      <header id="header" class="fixed-top d-flex align-items-center">
-        <nav>
-            <div class="logo">
-                <a href="/"><img src="/build/icons/imetfarm-log.png" alt="logo" class="img-fluid"></a>
-            </div>
-            <ul id="navbar" class="navbar">
-                <li><a class="nav-link scrollto" href="/">Home</a></li>
-                <li><a class="nav-link scrollto" href="/#about">About</a></li>
-                <li><a class="nav-link scrollto" href="/#products">Products</a></li>
-                <li><a class="nav-link scrollto" href="/pages/contact.html">Contact us</a></li>
-            </ul>
-        </nav>
-        <!-- .navbar -->
-    </header><!-- End Header -->
+      <header>
+        <div id="header" class="fixed-top d-flex align-items-center">
+          <div class="logo">
+              <a href="/"><img src="/build/icons/imetfarm-log.png" alt="logo" class="img-fluid"></a>
+          </div>
+          <nav class="nav-container">
+              <i class="bi bi-list mobile-nav-toggle"></i>
+              <ul id="navbar" class="navbar navbar-light navbar navbar-mobile">
+                  <li><a class="nav-link scrollto active-link" href="/">Home</a></li>
+                  <li><a class="nav-link scrollto" href="/#about">About</a></li>
+                  <li><a class="nav-link scrollto" href="/#products">Products</a></li>
+                  <li><a class="nav-link scrollto" href="/pages/contact.html">Contact us</a></li>
+              </ul>
+          </nav>
+          <!-- .navbar -->
+        </div>
+      </header><!-- End Header -->
 
       <main>
         <div id="main" class="background-item">

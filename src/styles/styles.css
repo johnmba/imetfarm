@@ -315,7 +315,6 @@ input, select, textarea, input[type=text], input[type=date], input[type=url], in
 .flicker-img > a {
   float: left;
   padding: 1px;
-  width: 33.33%;
 }
 
 .footer-icons {
